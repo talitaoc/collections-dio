@@ -20,9 +20,6 @@ public class Exercicio01 {
 		Calendar calendar = Calendar.getInstance();
 		Locale localeBR = new Locale("pt", "BR");
 
-		String dayName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, localeBR);
-
-		System.out.println("dayName = " + dayName);
 		
 		for (int i = 1; i <= 6; i++) {
 			
@@ -34,7 +31,7 @@ public class Exercicio01 {
 			
 		}
 		
-		System.out.println("\n----Medias mensal: " + temperatura);
+		System.out.println("\n----Medias mensais: " + temperatura);
 		
 		System.out.println("\n----Media semestral das temperaturas: " + media/6);
 		System.out.println();
@@ -43,7 +40,7 @@ public class Exercicio01 {
 		for (int i = 0; i < 6; i++) {
 			
 			calendar.set(Calendar.MONTH, i);
-			System.out.println(calendar.getDisplayName(i, Calendar.MONTH, localeBR) + " - " + temperatura);
+			System.out.println(i+1 + " - " + calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, localeBR) + " - " + temperatura.get(i));
 		}	
 
 		scan.close();
